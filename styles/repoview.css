@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+h3{
+    margin: 0;
+    margin-top: 20px;
+    color: #1d69cf;
+    background:transparent ;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #1d69cf;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+h5{
+    color: #1d69cf;
+    margin: 0;
+    font-size: 20px;
+}
+.repoview-card{
+    margin: 50px;
+    max-width:90% ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+    border-radius:5px;
+    background: linear-gradient(157deg, #fafafa 17.17%, #c2c4cd 84.45%);
+    box-shadow: 1.55897px 1.55897px 9.35384px 0px rgba(84, 127, 185, 0.45);
+    padding-left: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+.Link a{
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.Link a:hover{
+    color: #1d69cf;
+    font-size: 18px;
+}
+button{
+    height: fit-content;
+    padding: 5px 25px;
+    align-self: center;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    h3{
+      font-size: 19px;
+    }
+    h5{
+        font-size: 17px;
+    }
+  }
+  @media (max-width: 425px) {
+    h3{
+      font-size: 15px;
+    }
+    h5{
+        font-size: 14px;
+    }
+  }

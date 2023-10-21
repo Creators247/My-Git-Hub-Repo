@@ -1,0 +1,15 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right,#0f3733,#0f3733,#09253a,#0f3733,#09253a);
+  color: white;
+}
+a{
+  cursor: pointer;
+}

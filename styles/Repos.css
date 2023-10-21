@@ -1,0 +1,104 @@
+.repo-card h3 {
+  margin: 0;
+  margin-top: 10px;
+  color: white;
+  background: linear-gradient(157deg, #c2c4cd 84.45%, #fafafa 17.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.repo-card h3:hover{
+  color: white;
+}
+p {
+  margin: 0;
+  color: #1d69cf;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+button {
+  color: white;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #091e3a 0%, #2f80ed 50%, #2d9ee0 100%);
+  margin-bottom: 10px;
+  outline: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+a{
+  cursor: pointer;
+  text-decoration-line:none ;
+}
+a > h3:hover{
+  font-size: 27px;
+  color: white;
+}
+button > a {
+  color: white;
+  text-decoration-line: none;
+  font-family: "DM Sans", sans-serif;
+}
+button:hover {
+  background: transparent;
+  border-color: #646cff;
+}
+button > a:hover {
+  background: -webkit-linear-gradient(
+    90deg,
+    #091e3a 0%,
+    #2f80ed 50%,
+    #2d9ee0 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.repo-card {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24.944px;
+  background: linear-gradient(157deg, #fafafa 17.17%, #c2c4cd 84.45%);
+  box-shadow: 1.55897px 1.55897px 9.35384px 0px rgba(84, 127, 185, 0.45);
+  padding: 10px 20px;
+  max-width: 400px;
+  gap: 20px;
+}
+.repo-card:hover {
+  background: transparent;
+}
+.repo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+  padding: 100px 5px 0 5px;
+}
+
+.MainRepo > div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+}
+
+
+.MainRepo {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .repo-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
