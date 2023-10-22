@@ -29,8 +29,7 @@
 # Note 
 => when creating this app i ran into a lot of issues when and it made me not to delete the unnecessary folders and files so please this are the to files that i am not using  (scr) & (public)
 
-# Note => 
-after deploying my site to netlify, my 404 page stopped showing and was over ridding by netlify 404 page 
+
 
 
 
