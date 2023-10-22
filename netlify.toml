@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/components/404.jsx"
-  status = 404
