@@ -1,6 +1,7 @@
 .logo {
-  height: 80px;
-  padding: 20px;
+  height: 60px;
+  width: 40px;
+  margin-right: 10px;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -13,25 +14,135 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin: 10px 5%;
   border-bottom: 1px solid white;
+  justify-content: space-between;
+  padding: 0 10px;
 }
-h1{
-  font-size: 35px;
+.gitlogo {
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  max-width: 450px;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+}
+.sidebarbutton{
+  display: none;
+}
+.navbutton {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #1d6acf98;
+  border-radius: 0.25em;
+  padding: 8px 20px;
+  position: relative;
+  isolation: isolate;
+  background-color: transparent;
+  font-family: "DM Sans";
+  font-size: 15px;
+  margin: 0;
+  color: white;
+}
+.navbutton::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background-color: #1d6acf93;
+  inset: 0;
+  scale: 0 1;
+  transition: scale 450ms;
+  transform-origin: right;
+  color: white;
+}
+
+.navbutton:hover::after,
+.navbutton:focus-visible::after {
+  scale: 1 1;
+  transform-origin: left;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 0%;
 }
 @media (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 25px;
   }
   .logo {
     height: 50px;
   }
+  .navbar{
+    top: 0;
+    right: 0;
+    position: fixed;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    background-image: linear-gradient(to bottom right,#0f373393,#0f373393,#09253a93,#0f373393,#09253a93);
+    margin: 0%;
+    max-width: 60%;
+    width: 100%;
+    padding: 10px;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-top: 40px;
+    display: none;
+    z-index: 1;
+  }
+  .sidebarbutton{
+    display: block;
+    top: 0;
+    right: 0;
+    margin: 15px 20px 0 0;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+  }
+  .sidebarbutton img{
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+  }
+  nav{
+    flex-direction: column;
+    gap: 30px;
+    align-items:center;
+    margin-right: 0%;
+  }
+  .navbutton {
+    display: block;
+    width: 100%;
+    border: 0px ;
+  }
+  nav a{
+    display: block;
+    width: 100%;
+  }
 }
 @media (max-width: 425px) {
-  h1{
-    font-size: 20px;
+  h1 {
+    font-size: 18px;
   }
   .logo {
     height: 40px;
+  }
+  .navbar{
+    padding-top: 50px;
+    gap: 20px;
+  }
+  nav{
+    gap: 20px;
+  }
+  .gitlogo{
+    flex-direction: column;
+    gap: 10px;
   }
 }

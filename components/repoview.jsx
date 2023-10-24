@@ -47,7 +47,7 @@ function Repoview() {
 
       <p className="Link">View on Git-Hub: <b><Link to={user.html_url}> Visit Site </Link></b></p>
 
-      <button><Link to="/">Go back</Link></button>
+      <Link to="/"><button>Go back</button></Link>
     </div>
   );
 }

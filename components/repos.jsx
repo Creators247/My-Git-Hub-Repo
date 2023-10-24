@@ -33,7 +33,7 @@ function Repos() {
 
         <p className="visibility">Visibility: <b>{userElement.visibility}</b></p>
 
-        <button><a href={userElement.html_url}>View on GitHub</a> </button>
+        <a href={userElement.html_url}><button>View on GitHub</button></a> 
 
       </div>
     );
@@ -49,7 +49,6 @@ function Repos() {
     } else {
       return userElements;
     }
-    console.log(currentPage);
     return totalPage
   };
 
@@ -60,7 +59,6 @@ function Repos() {
       event.target.textContent= "The End"
     } else {
     setCurrentPage((prev) => prev + 6);
-    console.log(currentPage);
     }
   }
 

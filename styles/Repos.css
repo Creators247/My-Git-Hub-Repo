@@ -22,11 +22,11 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-button {
+.repo-card button {
   color: white;
   align-items: center;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #091e3a 0%, #2f80ed 50%, #2d9ee0 100%);
+  border-radius: 10px;
+  background:transparent;
   margin-bottom: 10px;
   outline: none;
   padding: 0.6em 1.2em;
@@ -43,24 +43,36 @@ a > h3:hover{
   font-size: 27px;
   color: white;
 }
-button > a {
+
+.repo-card button {
+  text-decoration: none;
+  border: 2px solid #1d69cf;
+  padding: 8px 30px;
+  position: relative;
+  isolation: isolate;
+  background-color: transparent;
+  font-family: "DM Sans";
+  font-size: 15px;
+  margin: 0;
   color: white;
-  text-decoration-line: none;
-  font-family: "DM Sans", sans-serif;
 }
-button:hover {
-  background: transparent;
-  border-color: #646cff;
+.repo-card button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(90deg, #091e3a93 0%, #2f80ed93 50%, #2d9ee093 100%);
+  inset: 0;
+  scale: 0 1;
+  transition: scale 450ms;
+  transform-origin: right;
+  color: white;
 }
-button > a:hover {
-  background: -webkit-linear-gradient(
-    90deg,
-    #091e3a 0%,
-    #2f80ed 50%,
-    #2d9ee0 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.repo-card button:hover::after,
+.repo-card button:focus-visible::after {
+  scale: 1 1;
+  transform-origin: left;
+  border-radius: 20px;
 }
 
 .repo-card {
@@ -99,6 +111,7 @@ button > a:hover {
 }
 @media (max-width: 768px) {
   .repo-container {
+    padding-top:50px ;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }

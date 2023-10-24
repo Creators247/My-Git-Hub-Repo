@@ -52,13 +52,13 @@ function Unknown() {
       <p>
         <TypingAnimation text={word6} speed={40} />
       </p>
-      <button>
-        <p>
-          <Link to="/">
+      <Link to="/">
+        <button className="navbutton">
+          <p>
             <TypingAnimation text={"Home Page"} speed={100} />
-          </Link>
-        </p>
-      </button>
+          </p>
+        </button>
+      </Link>
     </div>
   );
 }
