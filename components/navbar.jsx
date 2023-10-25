@@ -2,34 +2,43 @@ import React from "react";
 import GHicon from "../scr/github_icon.svg";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import {FiMenu} from "react-icons/fi"
+import {FiShuffle} from "react-icons/fi"
+import { useState } from "react";
 
-// creating the function for my side bar
-function sidebar(event) {
-  if (event.target.localName == "button") {
-    if (event.target.nextElementSibling.style.display == "") {
-      event.target.nextElementSibling.style.display = "flex";
-      event.target.innerHTML = `<img src="../scr/xx.svg" alt="">`;
-    } else {
-      event.target.nextElementSibling.style.display = "";
-      event.target.innerHTML = `<img src="../scr/start.svg" alt="">`;
-    }
-  } else {
-    if (event.target.parentElement.nextElementSibling.style.display == "") {
-      event.target.parentElement.nextElementSibling.style.display = "flex";
-      event.target.parentElement.innerHTML = `<img src="../scr/xx.svg" alt="">`;
-    } else {
-      event.target.parentElement.nextElementSibling.style.display = "";
-      event.target.parentElement.innerHTML = `<img src="../scr/start.svg" alt="">`;
-    }
-  }
-}
 
 //  Creating my navbar
 function Navbar() {
+  const [icon , setIcon] = useState(<FiMenu />)
+  
+  // creating the function for my side bar
+
+  function sidebar(event) {
+    let button = document.getElementById('BT')
+  if (event.target.localName == "button") {
+    if (event.target.nextElementSibling.style.display == "") {
+      event.target.nextElementSibling.style.display = "flex";
+     setIcon(<FiShuffle />)
+    } else {
+      event.target.nextElementSibling.style.display = "";
+      setIcon(<FiMenu />)
+    }
+  } else {
+    console.dir(button);
+    console.dir(event.target);
+    if (button.nextElementSibling.style.display == "") {
+      button.nextElementSibling.style.display = "flex";
+      setIcon(<FiShuffle />)
+    } else {
+      button.nextElementSibling.style.display = "";
+      setIcon(<FiMenu />)
+    }
+  }
+}
   return (
     <section>
-      <button className="sidebarbutton" onClick={sidebar}>
-        <img src="../scr/start.svg" alt="" onClick={sidebar} />
+      <button id="BT" className="sidebarbutton" onClick={sidebar}>
+        {icon}
       </button>
       <header className="navbar">
         <div className="gitlogo">

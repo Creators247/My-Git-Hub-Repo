@@ -15,6 +15,7 @@
 
 ## tool used 
 => react-error-boundary
+=> react-icons
 => react router
 => react
 => vite

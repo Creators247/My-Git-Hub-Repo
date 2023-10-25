@@ -106,10 +106,12 @@ h1 {
     cursor: pointer;
     position: fixed;
   }
-  .sidebarbutton img{
-    width: 20px;
-    height: 20px;
+  .sidebarbutton svg{
+    width: 40px;
+    height: 30px;
     z-index: 10;
+    fill: white;
+    color: white;
   }
   nav{
     flex-direction: column;
@@ -144,5 +146,9 @@ h1 {
   .gitlogo{
     flex-direction: column;
     gap: 10px;
+  }
+  .sidebarbutton svg{
+    width: 40px;
+    height: 20px;
   }
 }
