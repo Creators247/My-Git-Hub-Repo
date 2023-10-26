@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/404.css";
 
 // setting my function for the text type animation
-const TypingAnimation = ({ text, speed }) => {
+export const TypingAnimation = ({ text, speed }) => {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {

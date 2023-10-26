@@ -55,7 +55,7 @@ function Navbar() {
           <Link to="/*">
             <button className="navbutton">404 Page</button>
           </Link>
-          <Link>
+          <Link to= "/error-boundary">
             <button className="navbutton">Error boundary</button>
           </Link>
         </nav>
